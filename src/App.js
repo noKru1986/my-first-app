@@ -1,10 +1,9 @@
-import { useEffect, useState, useCallback } from "react";
 import "./App.css";
+import { useEffect, useState, useCallback } from "react";
 
 function App() {
   const [godina, setGodina] = useState(2023);
   const [klik, setKlik] = useState(0);
-
   const init = useCallback(() => {
     console.log("component init");
   }, []);
@@ -23,13 +22,13 @@ function App() {
       >
         DODAJ BROJ
       </button>
-      <p>{godina}</p>
+      <p>{klik}</p>
       <button
         onClick={() => {
-          setGodina(godina + 1);
+          setKlik(klik + 1);
         }}
       >
-        DODAJ KLIK
+        KLIK
       </button>
     </div>
   );
